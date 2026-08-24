@@ -1,0 +1,1 @@
+export default function Privacy(){return <section className="section"><div className="container"><div className="eyebrow">Νομικές πληροφορίες</div><h1>Πολιτική Απορρήτου</h1><p>Προσθέστε εδώ το εγκεκριμένο κείμενο πολιτικής απορρήτου της CONSPORT πριν τη δημοσίευση.</p></div></section>}

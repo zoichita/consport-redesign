@@ -1,0 +1,9 @@
+import type { Metadata } from "next";
+import Image from "next/image";
+import { notFound } from "next/navigation";
+import Link from "next/link";
+import { news } from "@/src/data/site";
+import { ArrowUpRight } from "@/src/lib/icons";
+export function generateStaticParams(){return news.map(n=>({slug:n.slug}))}
+export function generateMetadata({params}:{params:Promise<{slug:string}>}):Promise<Metadata>{return params.then(({slug})=>{const n=news.find(x=>x.slug===slug);return {title:n?.title||"Νέα"}})}
+export default async function NewsDetail({params}:{params:Promise<{slug:string}>}){const {slug}=await params;const n=news.find(x=>x.slug===slug);if(!n)notFound();return <><section className="section" style={{paddingTop:70}}><div className="container"><div className="detail-head"><div><div className="eyebrow">Νέα / CONSPORT</div><h1>{n.title}</h1></div><div className="detail-meta"><div><span>Κατηγορία</span><strong>{n.date}</strong></div></div></div><div className="project-hero-image" style={{position:"relative",height:"clamp(360px,55vw,680px)",marginTop:55}}><Image src={n.image} alt={n.title} fill sizes="100vw" style={{objectFit:"cover"}} priority/></div><div className="detail-description"><p>{n.excerpt}</p><p>Η σελίδα άρθρου έχει σχεδιαστεί ως editorial template ώστε το υφιστάμενο περιεχόμενο της CONSPORT να μπορεί να μεταφερθεί αυτούσιο, χωρίς να αλλάζει η πληροφορία. Το layout αφήνει χώρο για φωτογραφίες, τεχνικές λεπτομέρειες και σχετικά έργα.</p></div><Link href="/news" className="text-link" style={{marginTop:35}}>← Όλα τα νέα</Link></div></section><section className="cta"><div className="container cta-grid"><div><h2>Θέλετε περισσότερες πληροφορίες;</h2></div><Link href="/contact" className="button">Επικοινωνία <ArrowUpRight width={17} height={17}/></Link></div></section></>}

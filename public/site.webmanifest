@@ -1,0 +1,9 @@
+{
+  "name": "CONSPORT — Κατασκευές Αθλητικών Έργων",
+  "short_name": "CONSPORT",
+  "lang": "el-GR",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#106939"
+}

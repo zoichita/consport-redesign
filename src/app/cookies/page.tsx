@@ -1,0 +1,1 @@
+export default function Cookies(){return <section className="section"><div className="container"><div className="eyebrow">Νομικές πληροφορίες</div><h1>Πολιτική Cookies</h1><p>Προσθέστε εδώ το εγκεκριμένο κείμενο πολιτικής cookies της CONSPORT πριν τη δημοσίευση.</p></div></section>}
