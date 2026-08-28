@@ -6,11 +6,12 @@ import ProjectCard from "@/src/components/ProjectCard";
 import { products, projects, news } from "@/src/data/site";
 import { ArrowUpRight, Layers, Ruler, Shield } from "@/src/lib/icons";
 import Image from "next/image";
+import HeroSlider from "@/src/components/HeroSlider";
 
 export default function Home() {
   return <>
     <section className="hero">
-      <div className="hero-art"/><div className="hero-overlay"/>
+      <HeroSlider/><div className="hero-overlay"/>
       <div className="hero-content">
         <div className="eyebrow">Αθλητικές επιφάνειες / Ελλάδα</div>
         <h1>Χτίζουμε τις επιφάνειες όπου <em>η απόδοση</em> συναντά την ασφάλεια.</h1>
