@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/src/components/Header";
 import Footer from "@/src/components/Footer";
+import NewsFloatingPanel from "@/src/components/NewsFloatingPanel";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.consport.gr"),
@@ -12,5 +13,5 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="el"><body><a className="skip-link" href="#main">Μετάβαση στο περιεχόμενο</a><Header/><main id="main">{children}</main><Footer/></body></html>;
+  return <html lang="el"><body><a className="skip-link" href="#main">Μετάβαση στο περιεχόμενο</a><Header/><main id="main">{children}</main><Footer/><NewsFloatingPanel/></body></html>;
 }

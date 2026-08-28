@@ -86,9 +86,8 @@ export type Product = (typeof products)[number];
 
 export const projects = [
   {
-    slug: "paok-mesimvria",
-    title: "Προπονητικό κέντρο ΠΑΕ ΠΑΟΚ — Μεσήμβρια",
-    location: "Μεσήμβρια, Θεσσαλονίκη",
+    slug: "football-training-centre",
+    title: "Προπονητικό κέντρο ΠΑΕ ΠΑΟΚ",
     category: "Ποδόσφαιρο",
     tag: "FIFA",
     image: "/images/projects/football.svg",
@@ -96,9 +95,8 @@ export const projects = [
     details: ["Συνθετικός χλοοτάπητας 60mm", "FIFA 2 STAR", "Monofilament", "Αθλητικός εξοπλισμός"]
   },
   {
-    slug: "nafpaktos-basketball",
-    title: "Ανοικτό γήπεδο μπάσκετ — Ναύπακτος",
-    location: "Ναύπακτος",
+    slug: "outdoor-basketball",
+    title: "Ανοικτό γήπεδο μπάσκετ",
     category: "Μπάσκετ",
     tag: "Ακρυλικά",
     image: "/images/projects/basketball.svg",
@@ -106,9 +104,8 @@ export const projects = [
     details: ["Ακρυλικό σύστημα", "Εξωτερικός χώρος", "Διαγραμμίσεις γηπέδου"]
   },
   {
-    slug: "potidea-tennis-track",
-    title: "Τένις & στίβος — Potidea Palace",
-    location: "Ποτίδαια, Χαλκιδική",
+    slug: "tennis-and-track",
+    title: "Τένις & στίβος",
     category: "Τένις / Στίβος",
     tag: "ITF",
     image: "/images/projects/tennis.svg",
@@ -116,9 +113,8 @@ export const projects = [
     details: ["2 γήπεδα τένις", "Διάδρομος στίβου", "Προδιαγραφές ITF"]
   },
   {
-    slug: "salamina-football",
-    title: "Γήπεδα ποδοσφαίρου — Σαλαμίνα",
-    location: "Σαλαμίνα, Αττική",
+    slug: "football-fields",
+    title: "Γήπεδα ποδοσφαίρου",
     category: "Ποδόσφαιρο",
     tag: "55mm",
     image: "/images/projects/salamina.svg",
@@ -126,9 +122,8 @@ export const projects = [
     details: ["Αντικραδασμικό 8mm", "Χλοοτάπητας 55mm", "Monofilament"]
   },
   {
-    slug: "rodos-tennis",
-    title: "Γήπεδα τένις — Ρόδος",
-    location: "Ιαλυσσός, Ρόδος",
+    slug: "tennis-courts",
+    title: "Γήπεδα τένις",
     category: "Τένις",
     tag: "2.000m²",
     image: "/images/projects/tennis-blue.svg",
@@ -136,9 +131,8 @@ export const projects = [
     details: ["3 γήπεδα", "2.000m² συνολικά", "Ακρυλικά υλικά"]
   },
   {
-    slug: "chios-football",
-    title: "Γήπεδο 11×11 — Χίος",
-    location: "Χίος",
+    slug: "football-pitch-11x11",
+    title: "Γήπεδο 11×11",
     category: "Ποδόσφαιρο",
     tag: "6.500m²",
     image: "/images/projects/large-field.svg",
@@ -146,19 +140,17 @@ export const projects = [
     details: ["11×11", "6.500m²", "Χλοοτάπητας 60mm", "Προδιαγραφές FIFA"]
   },
   {
-    slug: "prespa-basketball",
-    title: "Κλειστό γήπεδο μπάσκετ — Πρέσπες",
-    location: "Λαιμός Πρεσπών",
+    slug: "indoor-basketball",
+    title: "Κλειστό γήπεδο μπάσκετ",
     category: "Μπάσκετ",
     tag: "SBR",
     image: "/images/projects/indoor.svg",
-    description: "Αντικραδασμικό ρολό SBR 6mm και ακρυλικά υλικά γηπέδων στο Πατουλίδειο Κλειστό Γυμναστήριο.",
+    description: "Αντικραδασμικό ρολό SBR 6mm και ακρυλικά υλικά γηπέδων σε κλειστό γυμναστήριο.",
     details: ["SBR 6mm", "Ακρυλικά υλικά", "Κλειστό γυμναστήριο"]
   },
   {
-    slug: "tilos-basketball",
-    title: "Γήπεδο μπάσκετ — Τήλος",
-    location: "Τήλος",
+    slug: "acrylic-basketball",
+    title: "Γήπεδο μπάσκετ",
     category: "Μπάσκετ",
     tag: "677m²",
     image: "/images/projects/track.svg",
@@ -213,3 +205,31 @@ export const news = [
     image: "/images/projects/large-field.svg"
   }
 ] as const;
+
+export const officialSidebar = {
+  news: {
+    id: "sidebar-news",
+    title: "Εφαρμογή και κατασκευή κόμβου με διακοσμητικό συνθετικό χλοοτάπητα",
+    image: "/images/sidebar/latest-news.jpg",
+    href: "/news",
+    moreLabel: "Περισσότερα..."
+  },
+  latestProject: {
+    id: "sidebar-project",
+    title: "Κατασκευή γηπεδου ποδοσφαίρου με οικολογικό συνθετικο χλοοτάπητα υψηλης ποιότητας",
+    image: "/images/sidebar/latest-project.jpg",
+    href: "/projects",
+    moreLabel: "Περισσότερα..."
+  },
+  projects: {
+    label: "Δείτε περισσότερα έργα >>",
+    href: "/projects"
+  },
+  facebook: {
+    href: "https://www.facebook.com/pages/Consport/414688311964972"
+  },
+  certifications: {
+    href: "/company#quality",
+    image: "/images/sidebar/certifications.png"
+  }
+} as const;

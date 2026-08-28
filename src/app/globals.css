@@ -31,3 +31,37 @@
 .brand{background:transparent;padding:0;overflow:visible}
 .brand-logo{filter:drop-shadow(0 1px 1px rgba(255,255,255,.28)) drop-shadow(0 2px 3px rgba(2,42,20,.58))}
 .certification-logo-fifa-frame{position:relative;display:block;width:100%;height:100%;min-width:0;min-height:0}.certification-logo-fifa{width:100%;height:100%;max-width:none;max-height:none;object-fit:contain;object-position:center}
+
+/* Global, fixed sidebar: it never participates in document layout. */
+.news-floating{position:fixed;z-index:45;right:0;top:50%;transform:translateY(-50%)}
+.news-floating-tab{position:fixed;right:0;top:50%;transform:translateY(-50%);display:grid;place-items:center;width:38px;height:112px;padding:10px 0;border:1px solid rgba(255,255,255,.32);border-right:0;border-radius:10px 0 0 10px;background:rgba(16,105,57,.82);box-shadow:0 10px 26px rgba(3,36,18,.22);color:#fff;font-size:11px;font-weight:800;letter-spacing:.16em;writing-mode:vertical-rl;backdrop-filter:blur(8px);transition:background .25s ease,box-shadow .25s ease}
+.news-floating-tab:hover,.news-floating-tab:focus-visible,.news-floating.is-open .news-floating-tab{background:rgba(11,79,43,.94);box-shadow:0 12px 30px rgba(3,36,18,.3);outline:0}
+.news-floating-tab:focus-visible{outline:2px solid var(--orange);outline-offset:-4px}
+.news-floating-content{position:fixed;right:46px;top:50%;width:clamp(320px,25vw,420px);max-height:min(720px,calc(100vh - 36px));overflow-y:auto;overscroll-behavior:contain;padding:22px;border:1px solid rgba(255,255,255,.25);background:rgba(7,51,29,.32);box-shadow:0 22px 55px rgba(2,26,13,.28);backdrop-filter:blur(18px) saturate(1.05);color:#fff;opacity:0;pointer-events:none;transform:translate(112%,-50%);transition:transform .36s cubic-bezier(.22,.61,.36,1),opacity .24s ease}
+.news-floating.is-open .news-floating-content{opacity:1;pointer-events:auto;transform:translate(0,-50%)}
+.news-floating-heading{display:flex;align-items:flex-start;gap:12px;padding-bottom:16px;border-bottom:1px solid rgba(255,255,255,.25)}
+.news-floating-heading span{display:block;color:var(--orange);font-size:9px;font-weight:800;letter-spacing:.15em;line-height:1.5}
+.news-floating-heading h2{margin:3px auto 0 0;font-size:25px;line-height:1;font-weight:800;letter-spacing:-.04em}
+.news-floating-heading button{display:grid;place-items:center;width:29px;height:29px;margin:-6px -6px 0 0;border:1px solid rgba(255,255,255,.28);border-radius:50%;background:rgba(8,58,31,.25);color:#fff;font-size:21px;line-height:1;transition:background .2s ease}
+.news-floating-heading button:hover,.news-floating-heading button:focus-visible{background:rgba(255,255,255,.16);outline:0}
+.news-floating-section,.news-floating-social,.news-floating-certifications{padding:18px 0;border-bottom:1px solid rgba(255,255,255,.2)}
+.news-floating-section h3,.news-floating-social h3,.news-floating-certifications h3{margin:0 0 11px;color:rgba(255,255,255,.82);font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
+.news-floating-item{display:block;padding:8px;border:1px solid transparent;background:rgba(255,255,255,.06);transition:transform .24s ease,background .24s ease,box-shadow .24s ease}
+.news-floating-item:hover,.news-floating-item:focus-visible{transform:translateY(-2px);background:rgba(10,88,46,.48);box-shadow:0 12px 24px rgba(0,20,9,.14);outline:0}
+.news-floating-image{position:relative;height:118px;margin-bottom:10px;overflow:hidden;background:rgba(1,36,18,.36)}
+.news-floating-image img{object-fit:cover;transition:transform .32s ease}
+.news-floating-item:hover .news-floating-image img{transform:scale(1.045)}
+.news-floating-item strong{display:block;font-size:14px;line-height:1.28;letter-spacing:-.015em}
+.news-floating-item span,.news-floating-more,.news-floating-social a{display:inline-flex;align-items:center;gap:6px;margin-top:9px;color:var(--orange);font-size:11px;font-weight:800}
+.news-floating-more{justify-content:flex-end;width:100%;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.2);transition:color .2s ease}
+.news-floating-more:hover,.news-floating-more:focus-visible,.news-floating-social a:hover,.news-floating-social a:focus-visible{color:#fff;outline:0}
+.news-floating-social a{margin-top:0}.news-floating-certifications{border-bottom:0}.news-floating-certifications a{display:block;text-align:center}.news-floating-certifications img{width:auto;max-width:100%;height:auto;max-height:112px;object-fit:contain}
+.news-floating-content::-webkit-scrollbar{width:7px}.news-floating-content::-webkit-scrollbar-thumb{background:rgba(255,255,255,.3);border-radius:20px}
+
+/* Project cards retain their grid but receive a self-contained, premium treatment. */
+.project-card{overflow:hidden;border:1px solid rgba(12,79,42,.14);border-radius:15px;background:#fff;box-shadow:0 9px 24px rgba(11,63,34,.08);transition:transform .28s ease,box-shadow .28s ease,border-color .28s ease}
+.project-card:hover{transform:translateY(-5px);border-color:rgba(12,105,57,.3);box-shadow:0 20px 42px rgba(11,63,34,.16)}
+.project-card .project-copy{align-items:flex-start;padding:19px 20px 21px}.project-card .project-copy h3{margin:6px 0 0;font-size:22px}.project-card .project-arrow{transition:transform .25s ease}.project-card:hover .project-arrow{transform:translate(2px,-2px)}
+
+@media(max-width:820px){.news-floating-tab{width:35px;height:98px}.news-floating-content{right:10px;width:min(90vw,380px);max-height:calc(100vh - 24px);padding:18px}.news-floating-image{height:110px}}
+@media(prefers-reduced-motion:reduce){.news-floating-tab,.news-floating-content,.news-floating-item,.news-floating-image img,.project-card,.project-card .project-arrow{transition:none}}
