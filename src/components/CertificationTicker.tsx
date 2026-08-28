@@ -18,6 +18,16 @@ function CertificationSet({ hidden = false }: { hidden?: boolean }) {
         <div className="certification-card" key={certification.label}>
           {"pace" in certification ? (
             <span className={`itf-badge itf-badge-${certification.pace}`} role="img" aria-label={hidden ? undefined : certification.label} />
+          ) : certification.className === "certification-logo-fifa" ? (
+            <span className="certification-logo-fifa-frame">
+              <Image
+                src={certification.image}
+                alt={hidden ? "" : certification.label}
+                fill
+                sizes="(max-width: 820px) 129px, 186px"
+                className={`certification-logo ${certification.className}`}
+              />
+            </span>
           ) : (
             <Image
               src={certification.image}
