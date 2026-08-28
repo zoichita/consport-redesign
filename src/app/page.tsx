@@ -4,7 +4,7 @@ import SectionHeading from "@/src/components/SectionHeading";
 import ProductCard from "@/src/components/ProductCard";
 import ProjectCard from "@/src/components/ProjectCard";
 import { products, projects, news } from "@/src/data/site";
-import { ArrowUpRight, Layers, Ruler, Shield } from "@/src/lib/icons";
+import { ArrowUpRight, Layers, MapPin, Ruler, Shield } from "@/src/lib/icons";
 import Image from "next/image";
 import HeroSlider from "@/src/components/HeroSlider";
 import CertificationTicker from "@/src/components/CertificationTicker";
@@ -19,6 +19,16 @@ export default function Home() {
         <p className="hero-copy">Η CONSPORT εξειδικεύεται στην κατασκευή αθλητικών έργων, συνθετικών χλοοταπήτων, ελαστικών δαπέδων και ολοκληρωμένων λύσεων για αθλητικούς χώρους και παιδικές χαρές.</p>
         <div className="hero-actions"><Link href="/projects" className="button button-light">Δείτε τα έργα <ArrowUpRight width={17} height={17}/></Link><Link href="/contact" className="button button-outline">Ζητήστε προσφορά <ArrowUpRight width={17} height={17}/></Link></div>
         <CertificationTicker />
+      </div>
+    </section>
+
+    <section className="stats-section" aria-label="Στοιχεία CONSPORT">
+      <div className="container stats-grid">
+        <article className="stat-card"><MapPin width={25} height={25}/><span>Εδραιωμένη Παρουσία στην Ελλάδα</span></article>
+        <article className="stat-card"><Ruler width={25} height={25}/><span>1.000+ Έργα</span></article>
+        <article className="stat-card"><MapPin width={25} height={25}/><span>Παρουσία σε Όλα τα Βαλκάνια</span></article>
+        <article className="stat-card"><Shield width={25} height={25}/><span>ISO Certified</span></article>
+        <article className="stat-card"><Layers width={25} height={25}/><span>Eco-Friendly</span></article>
       </div>
     </section>
 
