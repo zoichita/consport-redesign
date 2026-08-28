@@ -1,9 +1,9 @@
 import Image from "next/image";
 
 const certifications = [
-  { label: "FIFA Basic", image: "/images/certifications/fifa-basic.webp", className: "" },
-  { label: "FIFA Quality", image: "/images/certifications/fifa-quality.webp", className: "" },
-  { label: "FIFA Quality Pro", image: "/images/certifications/fifa-quality-pro.webp", className: "" },
+  { label: "FIFA Basic", image: "/images/certifications/fifa-basic.webp", className: "certification-logo-fifa" },
+  { label: "FIFA Quality", image: "/images/certifications/fifa-quality.webp", className: "certification-logo-fifa" },
+  { label: "FIFA Quality Pro", image: "/images/certifications/fifa-quality-pro.webp", className: "certification-logo-fifa" },
   { label: "ITF 2 - Medium-slow", pace: "2" },
   { label: "ITF 3 - Medium", pace: "3" },
   { label: "ITF 4 - Medium-fast", pace: "4" },
