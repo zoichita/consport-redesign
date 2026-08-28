@@ -18,8 +18,8 @@ export default function Home() {
         <h1>Χτίζουμε τις επιφάνειες όπου <em>η απόδοση</em> συναντά την ασφάλεια.</h1>
         <p className="hero-copy">Η CONSPORT εξειδικεύεται στην κατασκευή αθλητικών έργων, συνθετικών χλοοταπήτων, ελαστικών δαπέδων και ολοκληρωμένων λύσεων για αθλητικούς χώρους και παιδικές χαρές.</p>
         <div className="hero-actions"><Link href="/projects" className="button button-light">Δείτε τα έργα <ArrowUpRight width={17} height={17}/></Link><Link href="/contact" className="button button-outline">Ζητήστε προσφορά <ArrowUpRight width={17} height={17}/></Link></div>
-        <CertificationTicker />
       </div>
+      <CertificationTicker />
     </section>
 
     <section className="stats-section" aria-label="Στοιχεία CONSPORT">
