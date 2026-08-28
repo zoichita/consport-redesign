@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ChevronDown, MenuIcon, XIcon, ArrowUpRight } from "@/src/lib/icons";
 import { navigation, site } from "@/src/data/site";
 
@@ -10,12 +10,28 @@ export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [open, setOpen] = useState<string | null>(null);
+  const scrolledRef = useRef(false);
+  const scrollFrame = useRef<number | null>(null);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 24);
-    onScroll();
+    const updateScrolledState = () => {
+      scrollFrame.current = null;
+      const threshold = scrolledRef.current ? 16 : 32;
+      const nextScrolled = window.scrollY > threshold;
+      if (nextScrolled !== scrolledRef.current) {
+        scrolledRef.current = nextScrolled;
+        setScrolled(nextScrolled);
+      }
+    };
+    const onScroll = () => {
+      if (scrollFrame.current === null) scrollFrame.current = window.requestAnimationFrame(updateScrolledState);
+    };
+    updateScrolledState();
     window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      if (scrollFrame.current !== null) window.cancelAnimationFrame(scrollFrame.current);
+    };
   }, []);
 
   useEffect(() => {
