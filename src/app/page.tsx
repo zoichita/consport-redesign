@@ -7,6 +7,7 @@ import { products, projects, news } from "@/src/data/site";
 import { ArrowUpRight, Layers, Ruler, Shield } from "@/src/lib/icons";
 import Image from "next/image";
 import HeroSlider from "@/src/components/HeroSlider";
+import CertificationTicker from "@/src/components/CertificationTicker";
 
 export default function Home() {
   return <>
@@ -17,7 +18,7 @@ export default function Home() {
         <h1>Χτίζουμε τις επιφάνειες όπου <em>η απόδοση</em> συναντά την ασφάλεια.</h1>
         <p className="hero-copy">Η CONSPORT εξειδικεύεται στην κατασκευή αθλητικών έργων, συνθετικών χλοοταπήτων, ελαστικών δαπέδων και ολοκληρωμένων λύσεων για αθλητικούς χώρους και παιδικές χαρές.</p>
         <div className="hero-actions"><Link href="/projects" className="button button-light">Δείτε τα έργα <ArrowUpRight width={17} height={17}/></Link><Link href="/contact" className="button button-outline">Ζητήστε προσφορά <ArrowUpRight width={17} height={17}/></Link></div>
-        <div className="hero-meta"><div className="hero-stat"><strong>FIFA / ITF</strong><span>πιστοποιημένες λύσεις όπου εφαρμόζεται</span></div><div className="hero-stat"><strong>ISO 9001</strong><span>ποιότητα & διαδικασίες</span></div><div className="hero-stat"><strong>Θεσσαλονίκη</strong><span>βάση & τεχνική υποστήριξη</span></div></div>
+        <CertificationTicker />
       </div>
     </section>
 
