@@ -29,3 +29,4 @@
 
 /* The transparent logo keeps the header's green visual uninterrupted. */
 .brand{background:transparent;padding:0;overflow:visible}
+.brand-logo{filter:drop-shadow(0 1px 1px rgba(255,255,255,.28)) drop-shadow(0 2px 3px rgba(2,42,20,.58))}
