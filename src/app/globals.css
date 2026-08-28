@@ -27,9 +27,9 @@
 @media(max-width:480px){.stats-grid{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}.certification-ticker-track{animation:none}.product-card,.project-media img,.product-media img,.news-card img,.button{transition:none}}
 
-/* The cutout has no rectangular canvas; the shaped halo only separates its green artwork from the header. */
+/* The transparent asset carries its own fine keyline, with no card or header-layout treatment. */
 .brand{background:transparent;padding:0;overflow:visible}
-.brand-logo{filter:drop-shadow(0 0 1.5px rgba(194,228,202,.5)) drop-shadow(0 2px 4px rgba(1,35,16,.7))}
+.brand-logo{filter:none}
 .certification-logo-fifa-frame{position:relative;display:block;width:100%;height:100%;min-width:0;min-height:0}.certification-logo-fifa{width:100%;height:100%;max-width:none;max-height:none;object-fit:contain;object-position:center}
 
 /* Global, fixed sidebar: it never participates in document layout. */
