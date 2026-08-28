@@ -43,7 +43,7 @@ export default function Header() {
     <header className={`site-header ${scrolled ? "is-scrolled" : ""}`}>
       <div className="header-inner">
         <Link href="/" className="brand" aria-label="CONSPORT — Αρχική">
-          <Image src="/images/consport-logo-outlined.png" alt="CONSPORT" width={220} height={68} priority className="brand-logo" />
+          <Image src="/images/consport-logo-cutout.png" alt="CONSPORT" width={220} height={68} priority className="brand-logo" />
         </Link>
 
         <nav className="desktop-nav" aria-label="Κύρια πλοήγηση">
