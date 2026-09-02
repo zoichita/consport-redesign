@@ -27,6 +27,11 @@
 @media(max-width:480px){.stats-grid{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}.certification-ticker-track{animation:none}.product-card,.project-media img,.product-media img,.news-card img,.button{transition:none}}
 
+/* Shared header surface and its responsive navigation panel. */
+.site-header{background:#0b4d2b}
+.menu-button{border-radius:5px}
+@media(max-width:820px){.mobile-panel{background:#0b4d2b}}
+
 /* Preserve the logo artwork's intrinsic proportions in every header size. */
 .brand{background:transparent;padding:0;width:210px;height:74px;overflow:visible}
 .brand-logo{display:block;width:100%;height:100%;max-width:100%;object-fit:contain;object-position:center;flex:none;filter:none}
