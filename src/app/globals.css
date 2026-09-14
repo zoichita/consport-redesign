@@ -79,3 +79,42 @@
 /* A stable header box prevents scroll-threshold layout shifts and flicker. */
 .header-inner,.is-scrolled .header-inner{height:104px;transition:none}
 @media(max-width:820px){.header-inner,.is-scrolled .header-inner{height:76px}.hero h1{font-size:clamp(42px,11.5vw,62px)}}
+
+/* Homepage information rail: compact on desktop and part of normal flow on smaller screens. */
+.home-shell{display:grid;grid-template-columns:145px minmax(0,1fr);gap:32px;width:min(calc(100% - 48px),1500px);margin:0 auto}
+.home-info-rail{position:sticky;top:128px;align-self:start;display:grid;gap:8px;padding-top:42px}
+.home-info-card{display:flex;align-items:center;gap:9px;min-height:62px;padding:10px;background:var(--green);border-radius:14px;box-shadow:0 10px 20px rgba(10,63,34,.14);color:#fff}
+.home-info-card svg{flex:none;color:var(--orange)}
+.home-info-card span{font-size:11px;font-weight:800;line-height:1.2;letter-spacing:-.015em}
+.home-main-flow{min-width:0}
+.home-main-flow .container{width:100%}
+.homepage-selected-projects .project-card,.homepage-selected-projects .project-card:nth-child(3n+1),.homepage-selected-projects .project-card:nth-child(3n+2){grid-column:span 4}
+.homepage-selected-projects .project-media,.homepage-selected-projects .project-card:nth-child(3n+1) .project-media{height:390px}
+
+/* The company ISO block keeps its content while using a deliberately tighter presentation. */
+.company-quality{padding:72px 0}
+.company-quality .quality-grid{gap:52px}
+.company-quality .cert-panel{min-height:250px;padding:28px}
+.company-quality .cert-panel .big-mark{font-size:68px}
+.company-quality .cert-badge{padding:18px}
+.company-quality .cert-badge strong{font-size:23px}
+
+@media(max-width:1100px){
+  .home-shell{display:block;width:min(calc(100% - 48px),var(--max))}
+  .home-info-rail{position:static;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;padding:24px 0 0}
+  .home-info-card{justify-content:center;min-height:78px;padding:10px;text-align:center}
+}
+@media(max-width:820px){
+  .home-shell{width:min(calc(100% - 32px),var(--max))}
+  .home-info-rail{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;padding-top:20px}
+  .home-info-card{justify-content:flex-start;min-height:66px;padding:10px}
+  .home-info-card span{font-size:11px}
+  .home-info-card:last-child{grid-column:span 2}
+  .homepage-selected-projects .project-card,.homepage-selected-projects .project-card:nth-child(3n+1),.homepage-selected-projects .project-card:nth-child(3n+2){grid-column:auto}
+  .homepage-selected-projects .project-media,.homepage-selected-projects .project-card:nth-child(3n+1) .project-media{height:360px}
+  .company-quality{padding:52px 0}
+  .company-quality .quality-grid{gap:26px}
+  .company-quality .cert-panel{min-height:0;padding:22px}
+  .company-quality .cert-panel .big-mark{font-size:56px}
+  .company-quality .cert-badge{padding:16px}
+}
