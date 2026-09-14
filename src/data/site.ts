@@ -2,7 +2,7 @@ export const site = {
   name: "CONSPORT",
   strapline: "Κατασκευές Αθλητικών Έργων & Εμπορία Αθλητικών Ειδών",
   phone: "+30 2310 688 930",
-  mobile: "+30 6932 902 537",
+  mobile: "+30 6988 130 628",
   email: "info@consport.gr",
   address: "Αφροδίτης 6, Νέα Ευκαρπία, Τ.Κ. 56429, Θεσσαλονίκη",
   colors: {

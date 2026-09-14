@@ -82,7 +82,7 @@
 
 /* Homepage information rail: compact on desktop and part of normal flow on smaller screens. */
 .home-shell{display:grid;grid-template-columns:145px minmax(0,1fr);gap:32px;width:min(calc(100% - 48px),1500px);margin:0 auto}
-.home-info-rail{position:sticky;top:128px;align-self:start;display:grid;gap:8px;padding-top:42px}
+.home-info-rail{position:sticky;top:128px;align-self:start;display:grid;gap:14px;padding-top:42px}
 .home-info-card{display:flex;align-items:center;gap:9px;min-height:62px;padding:10px;background:var(--green);border-radius:14px;box-shadow:0 10px 20px rgba(10,63,34,.14);color:#fff}
 .home-info-card svg{flex:none;color:var(--orange)}
 .home-info-card span{font-size:11px;font-weight:800;line-height:1.2;letter-spacing:-.015em}

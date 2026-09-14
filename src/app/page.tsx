@@ -61,7 +61,7 @@ export default function Home() {
         <ScrollReveal>
           <section className="section section-alt">
             <div className="container">
-              <SectionHeading eyebrow="05 / Νέα" title="Από το έργο, στην ενημέρωση." href="/news" linkLabel="Όλα τα νέα" />
+              <SectionHeading eyebrow="03 / Νέα" title="Από το έργο, στην ενημέρωση." href="/news" linkLabel="Όλα τα νέα" />
               <div className="news-grid">
                 {news.slice(0, 3).map(item => <Link href={`/news/${item.slug}`} className="news-card" key={item.slug}>
                   <div className="news-media"><Image src={item.image} alt={item.title} fill sizes="(max-width: 800px) 100vw, 33vw" /></div>
@@ -74,17 +74,18 @@ export default function Home() {
           </section>
         </ScrollReveal>
 
-        <section className="cta">
-          <div className="container cta-grid">
-            <div>
-              <div className="eyebrow" style={{ color: "#fff" }}>06 / Επικοινωνία</div>
-              <h2>Σχεδιάζετε ένα νέο έργο;</h2>
-              <p>Μιλήστε με την ομάδα της CONSPORT για την κατάλληλη λύση αθλητικής επιφάνειας.</p>
-            </div>
-            <Link href="/contact" className="button">Επικοινωνήστε μαζί μας <ArrowUpRight width={17} height={17} /></Link>
-          </div>
-        </section>
       </div>
     </div>
+
+    <section className="cta">
+      <div className="container cta-grid">
+        <div>
+          <div className="eyebrow" style={{ color: "#fff" }}>04 / Επικοινωνία</div>
+          <h2>Σχεδιάζετε ένα νέο έργο;</h2>
+          <p>Μιλήστε με την ομάδα της CONSPORT για την κατάλληλη λύση αθλητικής επιφάνειας.</p>
+        </div>
+        <Link href="/contact" className="button">Επικοινωνήστε μαζί μας <ArrowUpRight width={17} height={17} /></Link>
+      </div>
+    </section>
   </>;
 }
