@@ -11,6 +11,11 @@ import { ArrowUpRight, Layers, MapPin, Ruler, Shield } from "@/src/lib/icons";
 
 export default function Home() {
   const selectedProjects = [projects[1], projects[2], projects[0]];
+  const productOverlayItems = [
+    ["ΓΗΠΕΔΑ ΠΟΔΟΣΦΑΙΡΟΥ", "ΓΗΠΕΔΑ ΤΕΝΙΣ"],
+    ["ΓΗΠΕΔΑ ΜΠΑΣΚΕΤ", "ΓΗΠΕΔΑ ΤΕΝΙΣ", "ΓΗΠΕΔΑ ΒΟΛΕΪ", "ΓΗΠΕΔΑ ΧΑΝΤΜΠΟΛ", "ΔΙΑΔΡΟΜΟΙ ΣΤΙΒΟΥ"],
+    ["ΠΑΙΔΙΚΕΣ ΧΑΡΕΣ", "ΔΙΑΚΟΣΜΗΤΙΚΟΙ ΧΛΟΟΤΑΠΗΤΕΣ", "ΑΘΛΗΤΙΚΟΣ ΕΞΟΠΛΙΣΜΟΣ", "ΥΛΙΚΑ ΚΑΙ ΣΥΝΤΗΡΗΣΗ ΓΗΠΕΔΩΝ"],
+  ] as const;
 
   return <>
     <section className="hero">
@@ -18,7 +23,14 @@ export default function Home() {
       <div className="hero-overlay" />
       <div className="hero-content">
         <div className="eyebrow">Αθλητικές επιφάνειες / Ελλάδα</div>
-        <h1>Χτίζουμε τις επιφάνειες όπου <em>η απόδοση</em> συναντά την ασφάλεια.</h1>
+        <h1 className="hero-direction-heading">
+          <span className="hero-direction-main">ΤΡΕΙΣ ΚΑΤΕΥΘΥΝΣΕΙΣ</span>
+          <span className="hero-direction-categories">
+            <span>ΣΥΝΘΕΤΙΚΟΙ ΧΛΟΟΤΑΠΗΤΕΣ</span>
+            <span>ΕΛΑΣΤΙΚΟΙ ΤΑΠΗΤΕΣ</span>
+            <span>ΑΛΛΑ ΠΡΟΪΟΝΤΑ/ΥΠΗΡΕΣΙΕΣ</span>
+          </span>
+        </h1>
         <p className="hero-copy">Η CONSPORT εξειδικεύεται στην κατασκευή αθλητικών έργων, συνθετικών χλοοταπήτων, ελαστικών δαπέδων και ολοκληρωμένων λύσεων για αθλητικούς χώρους και παιδικές χαρές.</p>
         <div className="hero-actions">
           <Link href="/projects" className="button button-light">Δείτε τα έργα <ArrowUpRight width={17} height={17} /></Link>
@@ -53,7 +65,7 @@ export default function Home() {
           <section className="section section-alt">
             <div className="container">
               <SectionHeading eyebrow="02 / Προϊόντα & υπηρεσίες" title="Τρεις κατευθύνσεις. Μία τεχνική ομάδα." description="Η νέα δομή συγκεντρώνει όλο το portfolio σε μία καθαρή εμπειρία, χωρίς να χάνεται η λεπτομέρεια των επιμέρους λύσεων." href="/products" linkLabel="Όλα τα προϊόντα" />
-              <div className="product-grid">{products.map(product => <ProductCard key={product.slug} product={product} />)}</div>
+              <div className="product-grid">{products.map((product, index) => <ProductCard key={product.slug} product={product} overlayItems={productOverlayItems[index]} />)}</div>
             </div>
           </section>
         </ScrollReveal>
