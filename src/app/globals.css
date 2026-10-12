@@ -149,5 +149,9 @@
 .nav-link:hover::after,.nav-item:focus-within .nav-link::after{transform:scaleX(1)}
 .text-link{transition:color .2s ease}
 .text-link:hover,.text-link:focus-visible{color:var(--red);outline:0}
-.button-outline:hover{border-color:var(--red);background:rgba(184,70,61,.1)}
+.button-outline,.button-dark[href="/contact"]{padding:13px 19px;border:2px solid var(--red);transition:transform .2s,background .2s,border-color .2s,box-shadow .2s,color .2s}
+.header-cta{padding:10px 15px;border:2px solid var(--red);transition:transform .2s,background .2s,border-color .2s,box-shadow .2s,color .2s}
+.button-outline:hover,.button-outline:focus-visible{border-color:var(--red);background:rgba(184,70,61,.2);box-shadow:0 0 0 3px rgba(184,70,61,.16);outline:0}
+.header-cta:hover,.header-cta:focus-visible{border-color:var(--red);background:#fff;box-shadow:0 0 0 3px rgba(184,70,61,.16);outline:0}
+.button-dark[href="/contact"]:hover,.button-dark[href="/contact"]:focus-visible{border-color:var(--red);background:var(--green-dark);box-shadow:0 0 0 3px rgba(184,70,61,.16);outline:0}
 .news-card:hover .news-meta{color:var(--red)}
