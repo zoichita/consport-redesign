@@ -143,3 +143,11 @@
   .homepage-product-card .product-image-overlay ul{gap:4px}
   .homepage-product-card .product-image-overlay li{font-size:13px;line-height:1.2}
 }
+
+/* Restrained red accents extend the approved palette without changing layout. */
+.nav-link::after{content:"";position:absolute;right:13px;bottom:6px;left:13px;height:2px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .2s ease}
+.nav-link:hover::after,.nav-item:focus-within .nav-link::after{transform:scaleX(1)}
+.text-link{transition:color .2s ease}
+.text-link:hover,.text-link:focus-visible{color:var(--red);outline:0}
+.button-outline:hover{border-color:var(--red);background:rgba(184,70,61,.1)}
+.news-card:hover .news-meta{color:var(--red)}
